@@ -9,7 +9,7 @@ The demo can be found at <a href="http://themegoodness.com/thinkpink/"> here </a
 
 The global addon needs to be installed to take advantage of this theme please follow the directions at the link above on how to enable this add on. 
 
-Please copy over the files found in the folders: 
+Please copy over the files found in the folders: <br />
 _config/fieldsets <br />
 _content/<br />
 _themes/<br />
