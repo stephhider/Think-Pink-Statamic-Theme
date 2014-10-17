@@ -5,7 +5,7 @@ Think Pink Theme for Statamic
 
 This theme is based off of the baseline <a href="https://github.com/statamicthemes/statarkers-theme">theme</a> put together by Garth Redfern. It uses the <a href="http://getuikit.com/index.html">UIkit framework</a>, <a href="http://lokeshdhakar.com/projects/lightbox2/">lightbox2</a> and <a href="http://owlgraphic.com/owlcarousel/">owlcarousel</a>. The theme requires a Statamic license which is purchase-able from their <a href="http://www.statamic.com/">website</a>. Special thanks to Jason Varga for the <a href="https://github.com/pixelfear/Statamic-Globals">global addon</a>. It was designed by <a href="http://stephaniehider.com">Stephanie Hider</a> in honor of her Grandmother who is a breast cancer survivor for 25 years&nbsp;now.
 
-The demo can be found at <a href="http://themegoodness.com/thinkpink/"> here </a>
+The demo can be found at <a href="http://thinkpink.themegoodness.com/"> here </a>
 
 The global addon needs to be installed to take advantage of this theme please follow the directions at the link above on how to enable this add on. 
 
