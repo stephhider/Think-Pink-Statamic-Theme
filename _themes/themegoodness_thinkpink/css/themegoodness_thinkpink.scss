@@ -908,6 +908,37 @@ form.contact-form {
 	margin-left: 0px!important;
 	padding-left: 0px!important;
 }
+.uk-navbar-nav.uk-hidden-small.uk-navbar-flip {
+	clear: both;
+	margin-top:80px;
+	width: 100%;
+}
+
+.hero h1 {
+font-family: 'Great Vibes', cursive;
+font-size: 3.2em;
+}
+.hero h2 {
+background-image: none;
+padding: 20px 0px;
+margin-top: 0px;
+}
+
+
+.hero .uk-vertical-align.uk-text-center, .uk-width-medium-1-1.uk-width-small-1.herospace{
+	margin-left: 0px!important;
+	padding-left: 0px!important;
+}
+
+.hero.uk-text-large.white-text {
+	width: 100%;
+}
+.hero .uk-button-large {
+min-height: 60px;
+padding: 0 30px;
+line-height: 60px;
+font-size: 20px;
+}
 
 }
 /* ---------------------------------------------------------------- */

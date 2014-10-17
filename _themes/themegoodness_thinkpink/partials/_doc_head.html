@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+
+{{ theme:partial src="_meta" }}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{# Place favicon.ico and apple-touch-icon.png in the root directory. #}}
+
+<!-- styles -->
+<link rel="stylesheet" href="{{ theme:asset src="bower_components/normalize-css/normalize.css" }}">
+<!--[if gte IE 8]><!-->
+<link rel="stylesheet" href="{{ theme:css }}">
+<!--<![endif]-->
+
+<!-- feeds -->
+<link rel="alternate" type="application/rss+xml" href="{{ _site_url }}feed" title="{{ _site_name }} RSS Feed">
+
+<!-- scripts -->
+<script src="{{ theme:asset src="bower_components/jquery/dist/jquery.min.js" }}"></script>
+<script src="{{ theme:asset src="bower_components/modernizr/modernizr.js" }}"></script>
+<!--[if IE 8]>
+<script src="{{ theme:js src="libs/DOMAssistantCompressed-2.8.1.js" }}"></script>
+<script src="{{ theme:asset src="bower_components/selectivizr/selectivizr.js" }}"></script>
+<![endif]-->
+
+<!-- analytics -->
+{{ theme:partial src="_analytics" }}
+
+</head>
