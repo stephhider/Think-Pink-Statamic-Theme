@@ -1,0 +1,56 @@
+<style>
+{{ get_content from="/globals" show_drafts="yes" }}
+
+/*button override*/
+.uk-button-primary, .pinktopline, .dropzone a:hover {
+  background-color: #{{  button }} !important;
+
+  }
+
+
+/*button hover override*/
+.uk-button-primary:hover,
+.uk-button-primary:focus {
+  background-color: #{{  button_hover }} !important;
+  color: white;
+  }
+
+
+  /* dark pink override*/
+  .pinktopline, .sub-head, .sub-head.title {
+    background-color: #{{  darkpink }} !important;
+
+    }
+
+    .uk-nav-offcanvas > .uk-open > a, html:not(.uk-touch) .uk-nav-offcanvas > li > a:hover, html:not(.uk-touch) .uk-nav-offcanvas > li > a:focus {
+    background: #{{  darkpink }} !important;
+
+    }
+
+  /* light pink override*/
+
+  .headline h2:before {
+      border-color: #{{  lightpink }}!important;
+
+    }
+
+  .headline h2:after {
+      border-top: 2px solid #{{  lightpink }}!important;
+
+    }
+
+/* link  override*/
+    a, .uk-link {
+    color: #{{  textlink }}!important;
+
+    }
+    a:hover, .uk-link:hover {
+      opacity: .5;
+    }
+
+
+  {{ /get_content }}
+
+
+
+</style>

@@ -1,0 +1,30 @@
+title: Programs
+include: meta                  # include the meta fields
+
+fields:
+  title:
+    instructions: "Enter the program page title here."
+  main_img:
+    display: Program Image
+    type: file
+    destination: assets/img/program  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will also display as a thumbnail on the home page."
+  main_section:
+    type: section
+    display: Program Content
+    instructions: "Enter your main page content here."
+
+  _template:
+    type: hidden
+    default: page
+
+  content:
+    display: Page Main Content
+    type: markitup
+    instructions:
+      below: "Add the main page content here."
+
+
+
+# This is the standard page fieldset it pulls in the meta fields and sets the template to always use the page template.

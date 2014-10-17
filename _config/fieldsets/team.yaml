@@ -1,0 +1,47 @@
+title: Team
+include: meta                  # include the meta fields
+
+fields:
+  title:
+    instructions: "Enter the main page title here."
+  main_img:
+    display: Team Member Image
+    type: file
+    destination: assets/img/ #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will also display as a thumbnail on the team page."
+
+  main_section:
+    type: section
+    display: Team Member Bio
+    instructions: "Enter team bio here."
+
+  _template:
+    type: hidden
+    default: page
+
+  content:
+    display: Page Main Content
+    type: markitup
+    instructions:
+      below: "Add the main page content here."
+  email:
+    display: Email address
+    type: text
+
+  social:
+    display: Adding Social contact links
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      caption:
+        display: Social Link name ( ie Twitter or Google Plus )
+        type: text
+        width: 30%
+      link:
+        display: Link to the social
+        type: text
+        width: 30%
+
+# This is the standard page fieldset it pulls in the meta fields and sets the template to always use the page template.

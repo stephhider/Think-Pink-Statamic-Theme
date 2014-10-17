@@ -1,0 +1,77 @@
+include: meta                  # include the meta fields
+hide: true
+
+fields:
+  title:
+    instructions: "Enter the main title here."
+
+  main_section:
+    type: section
+    display: Main Content
+    instructions: "Enter your main content here."
+
+  author:
+    display: Author
+    type: users
+
+  status:
+    display: Status
+    type: status
+
+  featured:
+    display: Featured
+    type: select
+    instructions: "Select if you would like this to be featured."
+    options:
+      not_featured: "No"
+      is_featured: "Yes"
+
+  categories:
+    display: Categories
+    type: suggest
+    create: true
+    max_items: 3
+    multiple: true
+    instructions:
+      below: "Create or select an existing category (maximum 3)."
+    taxonomy:
+      folder: blog #make sure you rename this to the folder name of your blog
+      type: categories
+
+  tags:
+    display: Tags
+    type: suggest
+    create: true
+    max_items: 3
+    multiple: true
+    instructions:
+      below: "Create or select an existing tag (maximum 3)."
+    taxonomy:
+      folder: blog #make sure you rename this to the folder name of your blog
+      type: tags
+
+  main_img:
+    display: Main Image
+    type: file
+    destination: assets/img/blog  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will also display as a thumbnail on the listing page."
+
+  video:
+    display: Video
+    type: textarea
+    instructions:
+      below: "Add the video embed code here."
+
+  summary:
+    display: Summary
+    required: true
+    type: textarea
+    instructions:
+      below: "Add a short summary here."
+
+  content:
+    display: Main Content
+    type: markitup
+    instructions:
+      below: "Add the main content here."

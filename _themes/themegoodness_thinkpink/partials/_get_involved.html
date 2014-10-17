@@ -1,0 +1,18 @@
+<div class="uk-container uk-container-center">
+      <div class="headline">
+          <h2>Get Involved </h2>
+      </div>
+    <div id="owl-demo" class="owl-carousel owl-theme">
+      {{ entries:listing folder="programs" show_future="true" limit="300" sort_dir="desc" }}
+      <div class="item"><a href="{{ url }}"><img src="{{ main_img }}" /></a>
+          <div class="panel"><h2>{{ title }} </h2>
+            <p>{{ content|truncate:80|widont }}</p>
+            <a class="uk-button uk-button-primary uk-button-small" href="{{ url }}">View</a>
+          </div> <!-- end of panel -->
+      </div> <!-- end of item -->
+      {{ /entries:listing }}
+      <div class="customNavigation">
+
+      </div> <!-- end of nav -->
+    </div> <!-- end of owl-carousel -->
+</div> <!-- end of container -->

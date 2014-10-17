@@ -1,0 +1,92 @@
+<!doctype html>
+<!--[if IE 8]><html class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8" />
+    {{ theme:partial src="_meta" }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>
+        {{ _site_name }}
+        {{ if segment_1 }}
+        – {{ title }}
+        {{ endif }}
+      </title>
+    <link rel="stylesheet" href="{{ theme:asset src="bower_components/normalize-css/normalize.css" }}">
+    {{ theme:css src="themegoodness_thinkpink" tag="true" }}
+    <link src="{{ theme:asset src="bower_components/lightbox2/css/lightbox.css" }}">
+    <script src="{{ theme:asset src="js/jquery.js" }}"></script>
+    <script src="{{ theme:asset src="bower_components/modernizr/modernizr.js" }}"></script>
+    <script src="{{ theme:asset src="bower_components/uikit/js/uikit.js" }}"></script>
+    <script src="{{ theme:asset src="bower_components/OwlCarousel/owl-carousel/owl.carousel.min.js" }}"></script>
+    <script src="{{ theme:asset src="bower_components/lightbox2/js/lightbox.min.js" }}"></script>
+    <script src="{{ theme:asset src="js/scripts.js" }}"></script>
+    <link href='http://fonts.googleapis.com/css?family=Questrial|Great+Vibes|Chivo' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{{ theme:img src="fav.png" }}">
+    <!-- feeds -->
+    <link rel="alternate" type="application/rss+xml" href="{{ _site_url }}feed" title="{{ _site_name }} RSS Feed">
+
+  <!-- global over rides on styles -->
+    {{ theme:partial src="_globalstyles" }}
+
+</head>
+  <body>
+
+
+
+<div class="wrapper">
+  <div class="pinktopline">
+  </div>
+
+
+  <div class="nav-wrapper">
+      {{ theme:partial src="_nav" }}
+  </div>
+
+
+
+    {{ layout_content }}
+
+  <div class="darkbrown-wrapper  footer">
+
+  {{ theme:partial src="_footer" }}
+
+  </div>
+
+</div>  <!-- end of wrapper -->
+
+<script>
+$(document).ready(function() {
+
+  var owl = $("#owl-demo");
+
+  owl.owlCarousel({
+      items : 3, //10 items above 1000px browser width
+      itemsDesktop : [1100,3], //5 items between 1000px and 901px
+      itemsDesktopSmall : [900,3], // betweem 900px and 601px
+      itemsTablet: [600,1], //2 items between 600 and 0
+      itemsMobile : false // itemsMobile disabled - inherit from itemsTablet option
+  });
+
+  // Custom Navigation Events
+  $(".next").click(function(){
+    owl.trigger('owl.next');
+  })
+  $(".prev").click(function(){
+    owl.trigger('owl.prev');
+  })
+  $(".play").click(function(){
+    owl.trigger('owl.play',1000); //owl.play event accept autoPlay speed as second parameter
+  })
+  $(".stop").click(function(){
+    owl.trigger('owl.stop');
+  })
+
+});
+</script>
+
+
+{{ theme:partial src="_tracking" }}
+
+  </body>
+</html>

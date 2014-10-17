@@ -1,0 +1,63 @@
+<div class="sub-image">
+	<img src="{{ header_img }}" />
+
+</div>
+<div class="sub-head uk-clearfix">
+	<div class="uk-grid">
+		<div class="uk-width">
+
+			</div>
+		</div>
+</div>
+
+<div class="uk-container page">
+	<div class="uk-grid">
+		<div class="uk-width-medium-2-3 uk-width-small-1">
+			<div class="article">
+				<h1>{{ title }}</h1>
+
+				{{ content|widont }}
+
+				{{ entries:listing folder="events" show_future="true" show_past="false" group_by_date="Y" sort_dir="asc" }}
+					{{ if no_results }}
+						<p class="sorry">
+							There are no events coming up. Stay tuned.
+						</p>
+					{{ else }}
+						{{ if first }}
+							<div class="big-calendar">
+						{{ endif }}
+
+						{{ if grouped_date }}
+							<div class="divider"><span>{{ grouped_date }}</span></div>
+						{{ endif }}
+
+						<div class="event-entry clearfix ">
+
+							<div class="event-description uk-grid uk-clearfix">
+								<div class="event-mainimage uk-width-medium-1-3 uk-width-small-1">
+									<img src="{{   main_img }}" />
+								</div>
+								<div class="event-description uk-width-medium-2-3 uk-width-small-1">
+								<div class="date-blob">
+									<strong>{{ datestamp format="M" }}</strong>
+									<span>{{ datestamp format="j" }}</span>
+								</div>
+								<h3><a href="{{url}}">{{ title }} </a></h3>
+								{{ content|truncate:130|widont }}
+							</div>
+							</div>
+						</div>
+
+						{{ if last }}
+							</div>
+						{{ endif }}
+					{{ endif }}
+				{{ /entries:listing }}
+			</div>
+		</div>
+		<div class="uk-width-medium-1-3 uk-width-small-1 sidebar" role="complementary">
+			{{ theme:partial src="_common-sidebar" }}
+		</div>
+	</div>
+</div><!--  end of grid -->

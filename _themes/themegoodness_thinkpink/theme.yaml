@@ -1,0 +1,37 @@
+###########################################################################################
+#
+#  THEME VARIABLES
+#
+###########################################################################################
+
+# Theme name
+theme_name: Themegoodness ThinkPink
+
+# Site Language
+site_language: "en"
+
+# Theme Strap Line
+strap_line: "A Themegoodness Theme"
+
+# Comments + Disqus
+disqus_account: {{ get_content from="/globals" show_drafts="yes" }} {{  disqus }} {{ /get_content }}
+show_comments: no
+
+# Blog
+blog_name: blog
+
+#Social Links
+facebook: {{ get_content from="/globals" show_drafts="yes" }} {{  facebook }} {{ /get_content }}
+twitter: {{ get_content from="/globals" show_drafts="yes" }} {{  twitter }} {{ /get_content }}
+linkedIn: {{ get_content from="/globals" show_drafts="yes" }} {{  linkedin }} {{ /get_content }}
+
+
+# Global text snippets
+no_results_text: "Sorry, no results found."
+
+# Site Description
+site_desc: "Enter a description which will display in your home page meta description and RSS feed."
+
+# Contact Details
+contact_name: Themegoodness
+contact_email: themes@themegoodness.com

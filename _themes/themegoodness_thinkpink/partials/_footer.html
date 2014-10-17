@@ -1,0 +1,60 @@
+<div class="uk-container uk-container-center foot uk-clearfix">
+<h2 class="footerheadline">Let's Connect</h2>
+  <div class="social-icons uk-clearfix">
+    <ul class="social-profiles">
+      {{ get_content from="/globals" show_drafts="yes" }}
+        {{ if linkedin }}
+        <li>
+          <a href="{{ linkedin }}">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+        {{ endif }}
+        {{ if twitter }}
+        <li>
+          <a href="{{ twitter }}">
+            <i class="fa fa-twitter"></i>
+          </a>
+        </li>
+        {{ endif }}
+        {{ if facebook }}
+        <li>
+          <a href="{{ facebook }}">
+            <i class="fa fa-facebook"></i>
+          </a>
+        </li>
+        {{ endif }}
+        {{ if googleplus }}
+        <li>
+          <a href="{{ googleplus }}">
+            <i class="fa fa-google-plus"></i>
+          </a>
+        </li>
+        {{ endif }}
+        {{ if rssfeed }}
+        <li>
+          <a href="{{ rssfeed }}">
+            <i class="fa fa-rss"></i>
+          </a>
+        </li>
+        {{ endif }}
+        {{ /get_content }}
+      </ul>
+  </div>
+
+
+
+<footer role="contentinfo" class="site__footer uk-clearfix">
+  <div class="top-link">
+    <a href="#" class="uk-buttonz white-text  totop" data-uk-smooth-scroll>{{ get_content from="/globals" show_drafts="yes" }}
+    <img src="{{  footer_logo_img }}" />{{ /get_content }}
+    </a>
+  </div>
+  <div class="constrain">
+    <small class="white-text">&copy; {{ current_date format="Y" }} <a href="{{ _site_root }}">{{ _site_name }}</a>    |    Powered by <a href="http://statamic.com"> Statamic  </a>    |  Theme designed by <a href="http://stephaniehider.com/">Stephanie Hider</a></small>
+  </div><!-- END .constrain -->
+</footer>
+
+
+
+</div><!-- END container -->

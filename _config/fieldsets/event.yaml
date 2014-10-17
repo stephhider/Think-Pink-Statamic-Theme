@@ -1,0 +1,34 @@
+title: Events
+include: meta                  # include the meta fields
+
+fields:
+  title:
+    instructions: "Enter the event page title here."
+  date:
+    display: Event Date
+    type: date
+    instructions: "Enter the event date here."
+  main_img:
+    display: Event Image
+    type: file
+    destination: assets/img/event  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will also display as a thumbnail on the event page."
+  main_section:
+    type: section
+    display: Event Content
+    instructions: "Enter your main page content here."
+
+  _template:
+    type: hidden
+    default: page
+
+  content:
+    display: Page Main Content
+    type: markitup
+    instructions:
+      below: "Add the main page content here."
+
+
+
+# This is the standard page fieldset it pulls in the meta fields and sets the template to always use the page template.

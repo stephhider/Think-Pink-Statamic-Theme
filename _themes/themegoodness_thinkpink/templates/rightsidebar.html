@@ -1,0 +1,39 @@
+<div class="sub-image">
+	<img src="{{ header_img }}" />
+
+</div>
+<div class="sub-head uk-clearfix">
+	<div class="uk-grid">
+		<div class="uk-width">
+
+			</div>
+		</div>
+</div>
+<div class="uk-container page uk-clearfix ">
+	<div class="uk-grid">
+		<div class="uk-hidden-small-1 uk-width-medium-2-3">
+			<div class="article">
+				{{ if alt_title }}
+				<h1>{{ alt_title }}</h1>
+				{{ else }}
+				<h1>{{ title }}</h1>
+				{{ endif }}
+
+				{{ content|widont }}
+
+
+
+
+				{{ if segment_1 == "" }}
+				<section class="articles">
+				{{ theme:partial src="_article_listing" fold="{blog_name}" lim="5" tax="no" }}
+				</section>
+				{{ endif }}
+
+			</div>
+		</div>
+		<div class="uk-hidden-small-1 uk-width-medium-1-3 sidebar" role="complementary">
+			{{ theme:partial src="_common-sidebar" }}
+		</div>
+	</div>
+</div><!--  end of grid -->

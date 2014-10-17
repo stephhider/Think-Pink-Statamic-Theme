@@ -1,0 +1,70 @@
+           <div class="uk-container  ">
+              <nav class="uk-navbar uk-margin-large-bottom">
+                <a class="uk-navbar-brand uk-hidden-small" href="/">{{ get_content from="/globals" show_drafts="yes" }}  <img class="logo-image" src="{{  logo_img }}" />{{ /get_content }}</a>
+                <ul class="uk-navbar-nav uk-hidden-small uk-navbar-flip">
+
+
+                  {{ nav from="/" max_depth="2" }}
+
+                    {{ if children }}
+                  <li class="uk-parent" data-uk-dropdown>
+                    <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+                    <div class="uk-dropdown uk-dropdown-navbar">
+                    <ul class="uk-nav uk-nav-navbar dropzone">
+                      {{ children }}
+                      <li class="nav__listItem">
+                        <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+                      </li>
+                      {{ /children }}
+                    </ul>
+                    </div>
+                    {{ else }}
+                      <li >
+                    <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+                    {{ endif }}
+                  </li>
+                  {{ /nav }}
+                </ul>
+                <a href="#offcanvas" class="uk-navbar-toggle uk-visible-small" data-uk-offcanvas></a>
+                <div class="uk-navbar-brand uk-navbar-center uk-visible-small">
+
+                <a class="uk-navbar-brand" href="/">  {{ get_content from="/globals" show_drafts="yes" }}  <img src="{{  logo_img }}" />{{ /get_content }} </a>
+
+                </div>
+            </nav>
+
+
+                   <div id="offcanvas" class="uk-offcanvas">
+                    <div class="uk-offcanvas-bar">
+                        <ul class="uk-nav uk-nav-offcanvas">
+                          {{ nav from="/" max_depth="2" }}
+                          <li class="nav__listItem">
+                            <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+
+                            {{ if children }}
+                            <ul>
+                              {{ children }}
+                              <li class="nav__listItem">
+                                <a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a>
+                              </li>
+                              {{ /children }}
+                            </ul>
+                            {{ endif }}
+                          </li>
+                          {{ /nav }}
+
+                        </ul>
+                    </div>
+                </div>
+
+       </div>  <!-- end of container -->
+{{#
+====================================
+  NOTES
+====================================
+
+This is the main nav partial.
+
+It uses the nav tag to render a list of navigation items. For more information on the nav tag see http://statamic.com/learn/documentation/tags/nav.
+
+#}}

@@ -1,0 +1,77 @@
+
+<div class="uk-panel uk-panel-box">
+  <h3 class="uk-panel-title">Programs</h3>
+			{{ entries:listing folder="programs" show_future="true" show_past="true" group_by_date="Y" sort_dir="asc" }}
+					{{ if no_results }}
+						<p class="sorry">
+							There are no events coming up. Stay tuned.
+						</p>
+					{{ else }}
+
+
+						<div class="team clearfix">
+              <ul class="uk-nav uk-nav-side">
+                  <li ><a href="{{ url }}"{{ if is_current }} class="current"{{ endif }}>{{ title }}</a></li>
+                </ul>
+						</div>
+					{{ endif }}
+				{{ /entries:listing }}
+</div>
+ <!-- end panel -->
+
+
+{{ get_content from="/globals" show_drafts="yes" }}
+
+{{ if callouts }}
+{{ callouts limit="5" }}
+<div class="uk-panel uk-panel-box">
+
+   <div class="calloutimage"> <img src="{{ photo }}" /></div>
+    <div class="panel">
+     <h3 class="uk-panel-title"> {{ headline }}</h3>
+     <p> {{ caption }} </p>
+    </div>
+</div>
+{{ /callouts }}
+{{ endif }}
+
+
+{{ if eventheadline }}
+<div class="uk-panel uk-panel-box">
+
+  <h3 class="uk-panel-title">{{ eventheadline }}</h3>
+      {{ entries:listing folder="events" limit="2" show_future="true" show_past="false" group_by_date="Y" sort_dir="asc" }}
+          {{ if no_results }}
+            <p class="sorry">
+              There are no events coming up. Stay tuned.
+            </p>
+          {{ else }}
+            {{ if first }}
+              <div class="big-calendar">
+            {{ endif }}
+
+            {{ if grouped_date }}
+              <div class="divider"><span>{{ grouped_date }}</span></div>
+            {{ endif }}
+
+            <div class="event clearfix">
+              <div class="date-blob">
+                <strong>{{ datestamp format="M" }}</strong>
+                <span>{{ datestamp format="j" }}</span>
+              </div>
+              <div class="event-description">
+                <h3><a href="{{url}}">{{ title }} </a></h3>
+
+              </div>
+            </div>
+
+            {{ if last }}
+              </div>
+            {{ endif }}
+          {{ endif }}
+        {{ /entries:listing }}
+
+</div>
+
+{{ endif }}
+{{ /get_content }}

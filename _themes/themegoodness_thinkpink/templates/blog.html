@@ -1,0 +1,63 @@
+<div class="sub-head title uk-clearfix">
+  <div class="uk-grid">
+    <div class="uk-width-1-1">
+      <div class="article uk-container uk-container-center">
+        <h1 class="h1headline">{{ title }}</h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container page">
+	<div class="uk-grid">
+		<div class="uk-width-small-1 uk-width-medium-2-3">
+			<div class="article">
+
+
+				{{ content|widont }}
+
+				{{ entries:listing folder="blog" limit="4" show_future="false" show_past="true" group_by_date="Y" sort_dir="desc" }}
+					{{ if no_results }}
+						<p class="sorry">
+							There are no events coming up. Stay tuned.
+						</p>
+					{{ else }}
+	           <div class="article-preview clearfix">
+								<h3><a href="{{url}}">{{ title }} </a></h3>
+                <div class="title">
+                  <span class="meta"><a href="#">{{ if categories }}{{ categories_url_list }}{{ endif }}</a> |
+                  {{date}}
+                  </span>
+                </div>
+                {{ if main_img }}
+                <div class="blog-image">
+                  <a href="{{url}}"><img src="{{ main_img }}" /></a>
+                </div>
+                {{ endif }}
+							{{ content|truncate:150|widont }}
+							</div>
+              {{ endif }}
+				{{ /entries:listing }}
+
+
+        {{ entries:pagination folder="blog" limit="5" }}
+          {{ if next_page || previous_page }}
+            <div class=" ">
+            <ul class="pagination">
+              {{ if next_page }}
+                <li class="older"><a href="{{ next_page }}" class="button older">Older Posts</a></li>
+              {{ endif }}
+              {{ if previous_page }}
+                <li class="newer"><a href="{{ previous_page }}" class="button newer">Newer Posts</a></li>
+              {{ endif }}
+              </ul>
+            </div>
+          {{ endif }}
+        {{ /entries:pagination }}
+			</div>
+		</div>
+		<div class="uk-width-small-1 uk-width-medium-1-3 sidebar" role="complementary">
+			{{ theme:partial src="_blog-sidebar" }}
+		</div>
+	</div>
+</div><!--  end of grid -->

@@ -1,0 +1,22 @@
+<div class="sub-head title uk-clearfix">
+	<div class="uk-grid">
+		<div class="uk-width-1-1">
+			<div class="article uk-container uk-container-center">
+				<h1 class="h1headline">{{ title }}</h1>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="article uk-container uk-container-center page">
+	<ul  class="uk-grid " data-uk-grid-margin>
+			{{ gallery limit="200" }}
+
+			<li class="uk-active uk-width-medium-1-3 gallery-entry">
+							<a class="gallery" href="{{ photo }}" data-lightbox="{{photo}}" data-title="{{ caption }}"><img  src="{{ photo }}" alt=""></a>
+			</li>
+			{{ /gallery }}
+	</ul>
+</div>

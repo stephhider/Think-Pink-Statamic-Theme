@@ -1,0 +1,18 @@
+hide: true
+include: meta                  # include the meta fields
+
+fields:
+  title:
+    instructions: "Enter the main page title here."
+    
+  content:
+    type: hidden
+
+  info_section:
+    type: section
+    display: No Content
+    instructions:
+      below: "This page is used to list other page content and doesn't have editable content of its own."
+    
+# This is the "no content" fieldset it can be used for pages that you want to show in the navigation but do not have any content.
+# Example: blog page that lists all the latest articles.

@@ -1,0 +1,135 @@
+hide: true
+
+fields:
+
+  slug:
+    hide: yes
+  content:
+    type: hidden
+
+
+
+
+  logo_img:
+    display: Logo
+    type: file
+    destination: assets/img/event  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the logo here, this will also display as a logo on all pages."
+  footer_logo_img:
+    display: Footer Logo
+    type: file
+    destination: assets/img/event  #make sure the folder exists and is writable
+    instructions:
+      below: "Add the logo here, this will also display as a logo on all pages on the footer."
+  button:
+    display: Switch out pink on buttons
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out the pink color for the button. Do not place the # part of the hex color. "
+  button_hover:
+    display: Switch out hover on buttons
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out the hover for the button. Do not place the # part of the hex color."
+  textlink:
+    display: Switch out link color
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out the pink color for the text links. Do not place the # part of the hex color. "
+  darkpink:
+    display: Switch out link dark pink color
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out dark pink colors. Do not place the # part of the hex color. "
+  lightpink:
+    display: Switch out link light pink color
+    type: text
+    instructions:
+      below: "Place a hex color here to easily swap out light pink colors. Do not place the # part of the hex color. "
+  trackingcode:
+    display: Tracking code
+    type: textarea
+    instructions:
+      below: "If you want to add tracking to each page place it here."
+  googlemap:
+    display: Google Map
+    type: textarea
+    instructions:
+      below: "If you want to add a google map to your contact page then place the embed code here."
+
+  social_section:
+    type: section
+    display: Social Items
+    instructions: "Enter items for the social links in the footer."
+  disqus:
+    display: Disqus Name
+    type: text
+    instructions:
+      below: "Add Disqus short name here for blog."
+  twitter:
+    display: Twitter
+    type: text
+    instructions:
+      below: "Twitter link."
+  facebook:
+    display: Facebook
+    type: text
+    instructions:
+      below: "Facebook link."
+  linkedin:
+    display: LinkedIn
+    type: text
+    instructions:
+      below: "LinkedIn link."
+  googleplus:
+    display: Google Plus
+    type: text
+    instructions:
+      below: "Google plus link."
+
+  rssfeed:
+    display: RSS Feed
+    type: text
+    instructions:
+      below: "Default for statamic is /blog/feed "
+
+
+
+
+
+  sidebar_section:
+    type: section
+    display: Sidebar Items
+    instructions: "Enter items for the sidebar."
+
+  sidebarnavtitle:
+    display: Sidebar nav title
+    type: text
+    instructions:
+      below: "If you want a sidebar nav place a title here."
+  callouts:
+    display: Adding Callouts to Sidebar
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      photo:
+        type: file
+        display: Callout Image
+        destination: assets/img
+        show_thumbnail: true
+      caption:
+        display: Caption
+        type: text
+        width: 30%
+      headline:
+        display: Headline
+        type: text
+        width: 30%
+
+  eventheadline:
+    display: Sidebar event title
+    type: text
+    instructions:
+      below: "If you want a list of events place a title here."

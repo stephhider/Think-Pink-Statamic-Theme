@@ -1,0 +1,68 @@
+<article class="article article-full">
+  <header class="article__header">
+
+    <h1>{{ title }}</h1>
+    {{ if author || date || categories_list || tags_list }}
+    <div class="article__meta">
+
+      {{ if author|not_empty }}
+      {{ member:profile member="{author}" }}
+      <p class="article__author">Posted by: {{ first_name }} {{ last_name }}</p>
+      {{ /member:profile }}
+      {{ endif }}
+
+      {{ if date }}
+      <p class="article__date"><time datetime="{{ datestamp format="Y-m-d" }}">{{ date }}</time></p>
+      {{ endif }}
+
+      {{ if categories_list && tags_list }}
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }} | <b>Tagged:</b> {{ tags_url_list }}</p>
+      {{ endif }}
+
+      {{ if categories_list && !tags_list }}
+      <p class="article__tax"><b>Category:</b> {{ categories_url_list }}</p>
+      {{ endif }}
+
+      {{ if !categories_list && tags_list }}
+      <p class="article__tax"><b>Tagged:</b> {{ tags_url_list }}</p>
+      {{ endif }}
+
+    </div><!-- END .article__meta -->
+    {{ endif }}
+  </header>
+
+  {{ if main_img|not_empty }}
+  <img src="{{ main_img }}" alt="" class="article__img">
+  {{ endif }}
+
+  <div class="article__lead">
+  {{ summary|smartypants|markdown }}
+  </div><!-- END .lead -->
+
+  <div class="article__main">
+  {{ content }}
+  </div><!-- END .main-content -->
+
+</article>
+
+{{ if show_comments }}
+<div class="comments">
+  <h3>Leave Your Comments</h3>
+  {{ disqus:comments account="{disqus_account}" }}
+</div>
+{{ endif }}
+
+{{#
+====================================
+  NOTES
+====================================
+
+This partial displays a single article if you require a listing use the _article_listings partial. The partials are designed so that you can use them modularly in your templates.
+
+For more information on partials see http://statamic.com/learn/theming/partials.
+
+There is a comments section which uses Disqus, to make this work you will need to set comments to yes in the theme.yaml file and add your Disqus short name in the same file. For more information on using Disqus comments see this post: http://garethredfern.com/article/using-disqus-with-statamic.
+
+The images are using the transform tag which caches images, for this to work you need to set up a cache folder in your assets/img directory with the writeable permissions. You then need to set this as your default location in your settings file: _transform_destination: assets/img/cache/
+
+#}}

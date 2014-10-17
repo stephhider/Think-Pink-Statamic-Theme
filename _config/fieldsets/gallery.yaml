@@ -1,0 +1,23 @@
+title: Gallery
+
+fields:
+
+  gallery:
+    display: Photo Gallery
+    type: grid
+    starting_rows: 1
+    min_rows: 1
+    fields:
+      photo:
+        type: file
+        display: Photo
+        destination: assets/img
+        show_thumbnail: true
+      caption:
+        display: Caption
+        type: text
+        width: 30%
+      title:
+        display: Title (required all one word & unique)
+        type: text
+        width: 30%

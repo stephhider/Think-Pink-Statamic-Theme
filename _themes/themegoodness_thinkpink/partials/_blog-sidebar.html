@@ -1,0 +1,32 @@
+
+{{ taxonomy:listing folder="blog" type="categories" sort_by="results" sort_dir="desc" }}
+  {{ if first }}
+    <div class="uk-panel uk-panel-box blog-categories side-block {{ switch between="odd|even" }}">
+          <h3 class="uk-panel-title">Categories</h3>
+      <ul class="uk-nav uk-nav-side">
+        {{ endif }}
+        <li>
+          <a href="{{ url }}">{{ name }}</a>
+        </li>
+        {{ if last }}
+      </ul>
+    </div>
+  {{ endif }}
+{{ /taxonomy:listing }}
+
+
+
+{{ taxonomy:listing folder="blog" type="tags" sort_by="results" sort_dir="desc" }}
+  {{ if first }}
+    <div class="uk-panel uk-panel-box blog-categories side-block {{ switch between="odd|even" }}">
+          <h3 class="uk-panel-title">Tags</h3>
+      <ul class="uk-nav uk-nav-side">
+        {{ endif }}
+        <li>
+          <a href="{{ url }}">{{ name }}</a>
+        </li>
+        {{ if last }}
+      </ul>
+    </div>
+  {{ endif }}
+{{ /taxonomy:listing }}

@@ -1,0 +1,46 @@
+
+
+<div class="sub-head title uk-clearfix">
+  <div class="uk-grid">
+    <div class="uk-width-1-1">
+      <div class="article uk-container uk-container-center">
+        <nav class="breadcrumbs ">
+            <ul class="uk-breadcrumb">
+
+                {{ nav:breadcrumbs include_home="no" }}
+                    {{ if is_current }}
+                        <li>{{ title }}</li>
+                    {{ else }}
+                        <li><a class="uk-hidden-small-1" href="{{ url }}">{{ title }}</a></li>
+                    {{ endif }}
+                {{ /nav:breadcrumbs }}
+            </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container page uk-clearfix  margintopsixty">
+  <div class="uk-grid">
+      <div class="uk-hidden-small-1 uk-width-medium-2-3">
+
+        <div class="date-blob">
+          <strong>{{ datestamp format="M" }}</strong>
+          <span>{{ datestamp format="j" }}</span>
+        </div>
+        <div class="main-content">
+          <h1>{{ title }}</h1>
+
+          <div class="event-entry-mainimage">
+            <img src="{{   main_img }}" />
+          </div>
+          {{ content }}
+        </div>
+      </div>
+      <div class="uk-hidden-small-1 uk-width-medium-1-3 sidebar" role="complementary">
+        {{ theme:partial src="_event-sidebar" }}
+      </div>
+
+      </div>
+    </div>

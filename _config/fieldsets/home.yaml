@@ -1,0 +1,22 @@
+title: Team
+include: meta                  # include the meta fields
+
+fields:
+  title:
+    instructions: "Enter the main page title here."
+  home_hero_img:
+    display: Hero Background Image
+    type: file
+    destination: assets/img/ #make sure the folder exists and is writable
+    instructions:
+      below: "Add the main image here, this will display in the hero area."
+
+  _template:
+    type: hidden
+    default: page
+
+  content:
+    display: Page Main Content
+    type: markitup
+    instructions:
+      below: "Add the main page content here."

@@ -1,0 +1,42 @@
+
+
+<div class="sub-head title uk-clearfix">
+  <div class="uk-grid">
+    <div class="uk-width-1-1">
+      <div class="article uk-container uk-container-center">
+        <nav class="breadcrumbs ">
+            <ul class="uk-breadcrumb">
+
+                {{ nav:breadcrumbs include_home="no" }}
+                    {{ if is_current }}
+                        <li>{{ title }}</li>
+                    {{ else }}
+                        <li><a class="uk-hidden-small-1" href="{{ url }}">{{ title }}</a></li>
+                    {{ endif }}
+                {{ /nav:breadcrumbs }}
+            </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="uk-container uk-container-center page uk-clearfix  margintopsixty">
+  <div class="uk-grid">
+
+
+      <h1> {{ title }}</h1>
+    <div class="mainimage">
+      <img src="{{   main_img }}" />
+    </div>
+
+    <div class="main-content">
+
+            {{ content }}
+    </div>
+
+</div>
+
+
+
+</div>
